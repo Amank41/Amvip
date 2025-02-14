@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𓄂⍣⃝🦋Prediction AM VIP⍣⃟❤️‍🩹𝄟</title>
+    <style>
+        body {
+            background-image: url("bg.jpeg");
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Prediction Section */
+        .prediction-section {
+            padding: 10px;
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 180px;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(0, 0, 255, 0.1));
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .box, .result-box {
+            width: 100%;
+            height: 35px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .result-box {
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            animation: popup 0.5s ease-out;
+        }
+
+        .result-box .left-label, .result-box .right-label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            font-weight: bold;
+            color: #6c757d;
+        }
+
+        .result-box .left-label {
+            left: 10px;
+        }
+
+        .result-box .right-label {
+            right: 10px;
+        }
+
+        @keyframes popup {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .select-box {
+            width: 100%;
+            height: 35px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        select {
+            width: 95%;
+            height: 90%;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            background: none;
+            appearance: none;
+            color: #343a40;
+        }
+
+        .select-box::after {
+            content: "👈GAME 𓄂⍣⃝🦋Prediction AM VIP⍣⃟𝄟";
+            position: absolute;
+            right: 10px;
+            font-size: 18px;
+        }
+
+        /* Web View Section */
+        .web-view-section {
+            flex: 1;
+            position: relative;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .result-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #343a40;
+            display: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Prediction Section -->
+    <div class="prediction-section" id="predictionSection">
+        <!-- Spinner Box -->
+        <div class="select-box">
+            <select id="gameSelector">
+                <option value="https://82lottery4.com/#/register?invitationCode=481442803973">82 Lottery</option>
+                <option value="https://51game7.in/#/register?invitationCode=73383417129">51 Game</option>
+                <option value="https://www.dmwin2.com/#/register?invitationCode=22884222334">DM Win</option>
+                <option value="https://bdgwin.cc/#/register?invitationCode=817554347451">BDG Game</option>
+                <option value="https://www.91appt.com/#/register?invitationCode=151435273028">91 Club</option>
+                <option value="https://diuapk.com/#/register?invitationCode=22884222334">DIU Win</option>
+                <option value="https://www.tirangagame.top/#/register?invitationCode=213547347755">tiranga</option>
+                
+            </select>
+        </div>
+        <!-- Period Box -->
+        <div class="box" id="period1m">WAIT...</div>
+        <!-- Timer Box -->
+        <div class="box" id="timer1m">WAIT...</div>
+        <!-- Result Box -->
+        <div class="result-box">
+            <span class="left-label"></span>
+            <span id="resultDisplay">ᴡᴀɪᴛ ɴᴇxᴛ ᴘᴇʀɪᴏᴅ</span>
+            <span class="right-label"></span>
+        </div>
+    </div>
+
+    <!-- Web View Section -->
+    <div class="web-view-section">
+        <iframe id="webView" src="https://82lottery4.com/#/register?invitationCode=481442803973"></iframe>
+        <div class="result-popup" id="webResultPopup">WAIT TILL NEXT PERIOD....</div>
+    </div>
+
+    <script>
+        // Period and timer functions
+        const resultsPattern = [
+            "SMALL 2/4", "BIG 7/9 ", "SMALL 2/ 4", "BIG 6/8", "SMALL1/3",
+            "SMALL 1/0", "BIG 5/6", "SMALL 2/0", "BIG 7/8", "BIG9/5",
+            "SMAL 3/0L", "BIG1/2", "SMALL 4/1", "SMALL 2/6", "SMALL | 0", "BIG | 5", "SMALL | 1", "BIG | 6", "SMALL | 2","SMALL | 0", "BIG | 5", "SMALL | 1", "BIG | 6", "SMALL | 2",
+            "SMALL | 3", "BIG | 7", "SMALL | 4", "BIG | 8", "BIG | 9"
+            
+        ];
+
+        let currentPeriodIndex = 0;
+
+        function updatePeriodAndTimer() {
+            const now = new Date();
+            const seconds = now.getUTCSeconds();
+            const remainingSeconds = 60 - seconds;
+            const minutes = now.getUTCMinutes();
+            const totalMinutes = now.getUTCHours() * 60 + minutes;
+
+            document.getElementById("period1m").textContent = `${now.getUTCFullYear()}${(now.getUTCMonth() + 1)
+                .toString().padStart(2, "0")}${now.getUTCDate().toString().padStart(2, "0")}1000${(10001 + totalMinutes).toString()}`;
+
+            document.getElementById("timer1m").textContent = `00:${remainingSeconds.toString().padStart(2, "0")}`;
+
+            if (remainingSeconds === 60) {
+                displayResult();
+            }
+        }
+
+        function displayResult() {
+            const resultDisplay = document.getElementById("resultDisplay");
+            const webResultPopup = document.getElementById("webResultPopup");
+
+            resultDisplay.textContent = resultsPattern[currentPeriodIndex];
+            webResultPopup.textContent = resultsPattern[currentPeriodIndex];
+            webResultPopup.style.display = "block";
+
+            setTimeout(() => {
+                webResultPopup.style.display = "none";
+            }, 2000);
+
+            currentPeriodIndex = (currentPeriodIndex + 1) % resultsPattern.length;
+        }
+
+        document.getElementById("gameSelector").addEventListener("change", (e) => {
+            document.getElementById("webView").src = e.target.value;
+        });
+
+        setInterval(updatePeriodAndTimer, 1000);
+    </script>
+</body>
+</html>
